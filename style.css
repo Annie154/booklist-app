@@ -1,0 +1,202 @@
+/*
+*{
+	margin: 0;
+	padding: 0; /* * - means apply to all the elements */
+}*/
+
+
+
+body{
+	background-color: #f4f4f4;
+	color:#555555;    
+
+	font-family: Arial, Helvetica, sans-serif;       
+    font-size: 12px;
+    font-weight: normal; /* can use bold and no's like 400 in value */
+    /* same as above */
+    font : normal 16px Arial, Helvetica, sans-serif;
+    line-height: 1.6em; /*sepr btw lines*/
+    margin: 0;
+}
+
+a{
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover{
+	color: red;
+}
+
+a:active{
+	color: green; /*Active means when u click on it it shows this color for a moment, this means it is active*/
+}
+
+a:visited{
+	
+}
+
+.button:hover{
+	background:red;
+	color:#fff;
+}
+.container{
+	width: 80%;   /*we can use pixel but using percent it's making it responsive*/
+	margin: auto;  /*spacing around element*/
+}
+/*this will apply to all the buttons */
+.button{
+	background-color: #333;
+	color: #fff;
+	padding: 10px 15px;
+	border: none;
+}
+
+.clr{
+	clear: both;
+}
+
+.box-1{
+	background-color: #333;
+	color: #fff;
+
+	border-right: 5px red solid;
+	border-left: 5px red solid;
+	border-top: 5px red solid;
+	border-bottom: 5px red solid;
+	
+
+	/*shortcut to apply same border for all*/
+	
+	border-width: 3px;
+	border-bottom-width: 10px;
+	border-top-style: dotted; /*solid , dotted, dash, double etc*/
+	border: 5px blue solid;
+	
+    /*padding*/
+    padding-right: 25px;
+	padding-left: 25px ;
+	padding-top: 15px;
+	padding-bottom: 25px;
+    /* same as above but applied for all*/
+	padding: 20px;
+	/*another way*/
+	padding: 15px 25px 15px 25px; /*clockwise - top right bottom left*/
+
+	/*margin*/
+	margin-top: 20px;
+	margin: 20px;
+	margin: 20px 0; /*0 for left and right*/
+}
+
+.box-1 h1{
+	/*will style all h1 in box-1 only, won't style h1 outside of it*/
+	font-family: Tahoma;
+	font-weight: 800;
+	font-style: italic;
+	text-decoration: underline;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	word-spacing: 0.8em;
+}
+
+.box-2 {
+	/*will style all h1 in box-1 only, won't style h1 outside of it*/
+	border: dotted #ccc;
+	padding: 20px;
+	margin: 20px 0;
+}
+
+.categories{
+	border: 1px #ccc solid;
+	padding: 10px;
+	border-radius: 15px; 
+
+}
+
+.categories h2{ 
+	text-align:center;
+}
+
+.categories ul{
+	padding: 0; /*ul by default adds padding*/
+	padding-left: 20px;
+	list-style: square;
+	list-style: none;
+}
+
+.categories li{
+	padding-bottom: 6px;
+	border-bottom: dotted 1px #333;
+	list-style-image: url('../images/check.png');
+}
+
+.my-form{
+	padding: 20px;
+}
+
+.my-form .form-group{
+	padding-bottom: 15px;
+}
+
+.my-form label{
+	display: block; /* inline elements can be put as a block*/
+}
+
+.my-form input[type="text"], .my-form textarea{
+	padding: 8px;
+	width: 100%; 
+}
+
+.block{
+	float:left;
+	width:33.3%;
+	/*putting border making all blocks big because width is 33.3% which is adding upto 99.9% which is almost 100% so it doesn't fit in a single line. So we'll use box-sizing for this issue. Box-sizing takes padding and border inside width.*/
+	border: 1px solid #ccc;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#main-block{
+	float: left;
+	width: 70%;
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+
+#sidebar{
+	float: right;
+	width: 30%;
+	background-color: #ccc;
+	color: #fff;
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+/* @59:37*/
+.p-box{
+	width:800px;
+	height:500px;
+	border:1px solid #000;
+	margin-top: 30px;
+	position: relative; /* now position of any element will be relative to the p-box not the full html */
+}
+
+.p-box h1{
+	position: absolute;
+	top:100px;
+	left: 200px;
+}
+
+.p-box h2{
+	position: absolute;
+	bottom:10px;
+	right: 200px;
+} /*this prop used in building games*/
+
+.fix-me{
+	position: fixed;
+	top:400px;
+}/*always gonna be at 400px from the top of browser*/
+/*This can be used when u want links and nav bar to show everytime*/
